@@ -10,7 +10,7 @@ public class Course : IDateTracking
     public Category? Category { get; set; }
     public string? Title { get; set; }
     public string? Description { get; set; }
-    public string? Image { get; set; }
+    public string? ImageUrl { get; set; }
     public int JoinNumber { get; set; }
 
     [Column(TypeName = "decimal(18,2)")]
