@@ -35,7 +35,9 @@ app.MapControllerRoute(
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    var services = scope.ServiceProvider;
     db.Database.Migrate();
+    await DbInitializer.Seed(services);
 }
 
 app.Run();

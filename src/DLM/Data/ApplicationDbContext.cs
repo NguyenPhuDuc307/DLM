@@ -33,8 +33,8 @@ public class ApplicationDbContext : DbContext
         return base.SaveChangesAsync(cancellationToken);
     }
 
-    public DbSet<Category>? Categories { get; set; }
-    public DbSet<Course>? Courses { get; set; }
-    public DbSet<Lesson>? Lessons { get; set; }
+    public DbSet<Category> Categories { get; set; } = null!;
+    public DbSet<Course> Courses { get; set; } = null!;
+    public DbSet<Lesson> Lessons { get; set; } = null!;
 
 }
